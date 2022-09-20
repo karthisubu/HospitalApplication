@@ -1,0 +1,31 @@
+<h3>Doctor Information</h3>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+                <select (change)="onChange($event)" class="btn btn-info" [(ngModel)]='name'>
+                    <option value="" selected>--Select Doctor--</option>
+                    <option *ngFor = "let doctor of doctors">{{doctor.doctorName}}</option>
+                  </select>
+                  
+        </div>
+    </nav>
+        
+<div class="card my-5">
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">DoctorName</th>
+                    <th scope="col">SpecilizationField</th>
+                    <th scope="col">No.of Patient Addened</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{doctor.doctorName}}</td>
+                    <td>{{doctor.doctorSpecilist}}</td>
+                    <td>{{doctor.noOfPatientAddened}}</td>           
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>        

@@ -1,0 +1,31 @@
+<h3>Patient Information</h3>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+      <form class="d-flex" (ngSubmit)="onSubmit()">
+        <input class="form-control me-2" type="text" name="id" [(ngModel)]="id" placeholder="Enter Patient ID" aria-label="Search">
+        <button type="submit" class="btn btn-outline-info">Search</button>
+      </form>
+    </div>
+  </nav>
+<div class="card my-5">
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">PatientName</th>
+                    <th scope="col">PatientAge</th>
+                    <th scope="col">VisitedDoctorName</th>
+                    <th scope="col">DateOfVisit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{patient.patientName}}</td>
+                    <td>{{patient.patientAge}}</td>
+                    <td>{{patient.patientVisitDoctor}}</td>
+                    <td>{{patient.patientDateOfVist}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
